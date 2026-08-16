@@ -4,28 +4,32 @@
   <meta charset="UTF-8">
   <title>BizStarterHub</title>
   <style>
-    body {margin:0; font-family:'Segoe UI', Arial, sans-serif; background:#f9f9f9; color:#333;}
-    
+    body {
+      margin:0; font-family:'Segoe UI', Arial, sans-serif;
+      background:#f9f9f9; color:#333;
+    }
+
     /* Hero Banner */
     header.hero {
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      background:url('hero.jpg') center/cover no-repeat;
       padding:150px 20px; text-align:center; color:#fff;
     }
-    header.hero h1 {font-size:52px; margin:0;}
-    header.hero p {font-size:22px; margin:15px 0 30px;}
     .button {
       display:inline-block; padding:14px 30px;
-      background:#ff6f61; color:#fff; text-decoration:none;
+      background: linear-gradient(135deg, #ff6f61 0%, #ff3b2e 100%);
+      color:#fff; text-decoration:none;
       border-radius:30px; font-weight:bold; transition:0.3s;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
     }
-    .button:hover {background:#ff3b2e;}
+    .button:hover {transform:scale(1.05);}
 
     /* Sections */
     section {padding:60px 20px; text-align:center;}
     section h2 {color:#2575fc; margin-bottom:20px;}
-    section:nth-child(even) {background:#f0f8ff;}
+    section:nth-child(even) {
+      background: linear-gradient(135deg, #f0f8ff 0%, #e6f0ff 100%);
+    }
     section:nth-child(odd) {background:#fff;}
-    .testimonial {font-size:18px; margin:20px auto; max-width:700px;}
 
     /* Footer */
     footer {
@@ -38,9 +42,8 @@
 
   <!-- Hero Banner -->
   <header class="hero">
-    <h1>Launch Your Online Business Today</h1>
-    <p>Helping 1,000+ entrepreneurs worldwide build and grow their business</p>
-    <a href="#main-content" class="button">Join Now</a>
+    <!-- Join Now button opens signup page -->
+    <a href="signup.html" class="button">Join Now</a>
   </header>
 
   <!-- Main Content -->
