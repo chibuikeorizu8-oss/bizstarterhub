@@ -5,15 +5,33 @@
   <title>BizStarterHub</title>
   <style>
     body {margin:0; font-family:'Segoe UI', Arial, sans-serif; background:#f9f9f9; color:#333;}
-    header.hero {background:url('hero.jpg') center/cover no-repeat; padding:150px 20px; text-align:center; color:#fff;}
+    
+    /* Hero Banner */
+    header.hero {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      padding:150px 20px; text-align:center; color:#fff;
+    }
     header.hero h1 {font-size:52px; margin:0;}
     header.hero p {font-size:22px; margin:15px 0 30px;}
-    .button {display:inline-block; padding:14px 30px; background:#007BFF; color:#fff; text-decoration:none; border-radius:6px; font-weight:bold;}
-    .button:hover {background:#0056b3;}
+    .button {
+      display:inline-block; padding:14px 30px;
+      background:#ff6f61; color:#fff; text-decoration:none;
+      border-radius:30px; font-weight:bold; transition:0.3s;
+    }
+    .button:hover {background:#ff3b2e;}
+
+    /* Sections */
     section {padding:60px 20px; text-align:center;}
-    section h2 {color:#007BFF; margin-bottom:20px;}
+    section h2 {color:#2575fc; margin-bottom:20px;}
+    section:nth-child(even) {background:#f0f8ff;}
+    section:nth-child(odd) {background:#fff;}
     .testimonial {font-size:18px; margin:20px auto; max-width:700px;}
-    footer {background:#333; color:#fff; text-align:center; padding:20px; margin-top:40px;}
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+      color:#fff; text-align:center; padding:20px; margin-top:40px;
+    }
   </style>
 </head>
 <body>
@@ -35,7 +53,6 @@
     <section>
       <h2>Payment</h2>
       <p>Choose secure payment methods including Card, PayPal, and Crypto.</p>
-      <a href="payment.html" class="button">Go to Payment</a>
     </section>
 
     <section>
@@ -46,7 +63,6 @@
     <section>
       <h2>Contact</h2>
       <p>Need help? Reach out via our contact form.</p>
-      <a href="contact.html" class="button">Contact Us</a>
     </section>
   </div>
 
