@@ -2,77 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BizStarterHub - Secure Checkout</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Payment - BizStarterHub</title>
   <style>
-    body { font-family: 'Roboto', sans-serif; background:#f9f9f9; margin:0; padding:0; }
-    .container { max-width:600px; margin:50px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    h2 { text-align:center; color:#333; }
-    form { display:flex; flex-direction:column; }
-    label { margin-top:10px; font-weight:bold; }
-    input { padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
-    button { margin-top:20px; padding:12px; background:#007BFF; color:#fff; border:none; border-radius:4px; cursor:pointer; font-size:16px; }
-    button:hover { background:#0056b3; }
-    .hidden { display:none; }
-    .trust { text-align:center; margin-top:20px; }
-    .trust img { height:40px; margin:0 10px; }
+    body {font-family:'Segoe UI', Arial, sans-serif; background:#f9f9f9; margin:0;}
+    header {background:#007BFF; color:#fff; padding:20px; text-align:center;}
+    .container {max-width:800px; margin:40px auto; padding:20px; background:#fff; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+    .method {margin:20px 0; padding:20px; border:1px solid #ddd; border-radius:5px;}
+    .method h2 {color:#007BFF;}
+    .button {display:inline-block; margin-top:10px; padding:10px 20px; background:#007BFF; color:#fff; text-decoration:none; border-radius:5px;}
+    .button:hover {background:#0056b3;}
+    footer {text-align:center; padding:20px; background:#333; color:#fff; margin-top:40px;}
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Contact Admin First</h2>
-    <p>Please fill out this form. After a short wait, secure payment options will appear.</p>
-    <form id="contactForm">
-      <label>First Name</label>
-      <input type="text" name="firstName" required>
-      <label>Last Name</label>
-      <input type="text" name="lastName" required>
-      <label>Email Address</label>
-      <input type="email" name="email" required>
-      <label>Message</label>
-      <input type="text" name="message" required>
-      <button type="submit">Submit</button>
-    </form>
 
-    <div id="waitingMessage" class="hidden">
-      <h2>Preparing Secure Checkout...</h2>
-      <p>Please wait while we verify your request. Payment options will appear shortly.</p>
-    </div>
+<header>
+  <h1>Secure Payment Options</h1>
+</header>
 
-    <div id="paymentSection" class="hidden">
-      <h2>Secure Checkout</h2>
-      <form>
-        <label>Card Number</label>
-        <input type="text" placeholder="1234 1234 1234 1234">
-        <label>Expiry Date (MM/YY)</label>
-        <input type="text" placeholder="MM/YY">
-        <label>Security Code</label>
-        <input type="text" placeholder="CVC">
-        <label>Country/Territory</label>
-        <input type="text" placeholder="United States">
-        <h3>Total: $149.00 USD</h3>
-        <button type="submit">Place Order Now</button>
-      </form>
-      <div class="trust">
-        <img src="visa.png" alt="Visa">
-        <img src="mastercard.png" alt="MasterCard">
-        <img src="paypal.png" alt="PayPal">
-      </div>
-    </div>
+<div class="container">
+  <p>Please choose your preferred payment method below:</p>
+
+  <div class="method">
+    <h2>💳 Credit/Debit Card</h2>
+    <p>Pay securely with Visa, MasterCard, or American Express.</p>
+    <a href="thankyou.html" class="button">Pay with Card</a>
   </div>
 
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      document.getElementById("contactForm").classList.add("hidden");
-      document.getElementById("waitingMessage").classList.remove("hidden");
+  <div class="method">
+    <h2>💲 PayPal</h2>
+    <p>Use your PayPal account for fast checkout.</p>
+    <a href="thankyou.html" class="button">Pay with PayPal</a>
+  </div>
 
-      // Show payment after 5 minutes (300000 ms)
-      setTimeout(function(){
-        document.getElementById("waitingMessage").classList.add("hidden");
-        document.getElementById("paymentSection").classList.remove("hidden");
-      }, 300000);
-    });
-  </script>
+  <div class="method">
+    <h2>₿ Crypto</h2>
+    <p>Pay with XRP or Bitcoin. Send to wallet address:</p>
+    <p><strong>XRP Wallet:</strong> rEXAMPLE123456789</p>
+    <p><strong>BTC Wallet:</strong> 1ExampleBitcoinAddress123</p>
+    <a href="thankyou.html" class="button">Confirm Crypto Payment</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 BizStarterHub — Empowering Entrepreneurs Worldwide
+</footer>
+
 </body>
 </html>
