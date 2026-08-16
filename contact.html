@@ -1,44 +1,41 @@
-<!-- Hero Section -->
-<header class="hero">
-  <h1>Launch Your Online Business Today!</h1>
-  <p>Helping 1,000+ entrepreneurs worldwide build and grow their business</p>
-  <button onclick="location.href='payment.html'">Join Now</button>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - BizStarterHub</title>
+  <style>
+    body { font-family:'Roboto', sans-serif; background:#f9f9f9; margin:0; padding:0; }
+    .container { max-width:600px; margin:50px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align:center; color:#007BFF; }
+    form { display:flex; flex-direction:column; }
+    label { margin-top:10px; font-weight:bold; }
+    input, textarea { padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
+    button { margin-top:20px; padding:12px; background:#007BFF; color:#fff; border:none; border-radius:4px; cursor:pointer; font-size:16px; }
+    button:hover { background:#0056b3; }
+    .info { text-align:center; margin-top:20px; font-size:14px; color:#555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact BizStarterHub</h2>
+    <form action="thankyou.html" method="get">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
-<!-- Intro Video -->
-<div class="video-container">
-  <h2>Watch Our Intro Video</h2>
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/d1KSghlLNkc"
-    frameborder="0" allowfullscreen>
-  </iframe>
-</div>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-<!-- Testimonials Slider -->
-<section class="testimonials">
-  <h2>Trusted by Over 1,000 Entrepreneurs Worldwide</h2>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="images/john.jpg" alt="John from USA">
-        <p>"BizStarterHub helped me launch my online store."</p>
-        <strong>- John, New York (USA)</strong>
-      </div>
-      <div class="swiper-slide">
-        <img src="images/fatima.jpg" alt="Fatima from Morocco">
-        <p>"The systems saved me months of trial and error."</p>
-        <strong>- Fatima, Casablanca (Morocco)</strong>
-      </div>
-      <div class="swiper-slide">
-        <img src="images/ahmed.jpg" alt="Ahmed from Egypt">
-        <p>"I scaled my freelance business faster than I imagined."</p>
-        <strong>- Ahmed, Cairo (Egypt)</strong>
-      </div>
-      <div class="swiper-slide">
-        <img src="images/thabo.jpg" alt="Thabo from South Africa">
-        <p>"I turned my side hustle into a full‑time income."</p>
-        <strong>- Thabo, Johannesburg (South Africa)</strong>
-      </div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="info">
+      <p>📧 Email: support@bizstarterhub.com</p>
+      <p>📞 Phone: +1 (555) 123‑4567</p>
+      <p>🌍 Location: United States</p>
     </div>
   </div>
-</section>
+</body>
+</html>
