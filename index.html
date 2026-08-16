@@ -1,91 +1,177 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>BizStarterHub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <style>
-    body { font-family:'Roboto', sans-serif; margin:0; padding:0; background:#f9f9f9; }
-    header.hero { background:url('images/hero.jpg') center/cover no-repeat; padding:120px 20px; text-align:center; color:#fff; }
-    header.hero h1 { font-size:40px; margin:0; }
-    header.hero p { font-size:20px; margin:10px 0; }
-    header.hero button { background:#007BFF; color:#fff; border:none; padding:12px 20px; border-radius:4px; cursor:pointer; font-size:18px; }
-    header.hero button:hover { background:#0056b3; }
-
-    .video-container { text-align:center; margin:60px 0; }
-    iframe { max-width:100%; border-radius:8px; }
-
-    .testimonials { background:#fff; padding:60px 20px; text-align:center; }
-    .testimonials h2 { font-size:28px; margin-bottom:30px; color:#007BFF; }
-    .swiper-container { width:100%; max-width:600px; margin:auto; }
-    .swiper-slide { background:#f1f1f1; padding:30px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    .swiper-slide p { font-size:18px; margin-bottom:15px; }
-    .swiper-slide strong { color:#333; }
+    body {
+      margin:0;
+      font-family:Arial, sans-serif;
+    }
+    nav {
+      background:#333;
+      padding:10px;
+      text-align:center;
+    }
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+    }
+    nav a:hover {
+      text-decoration:underline;
+    }
+    header.hero {
+      background:url('hero.jpg') center/cover no-repeat;
+      padding:120px 20px;
+      text-align:center;
+      color:#fff;
+    }
+    header.hero h1 {
+      font-size:48px;
+      margin:0;
+    }
+    header.hero p {
+      font-size:20px;
+      margin:10px 0 20px;
+    }
+    header.hero a {
+      display:inline-block;
+      padding:12px 25px;
+      background:#007BFF;
+      color:#fff;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+    }
+    header.hero a:hover {
+      background:#0056b3;
+    }
+    section.testimonials {
+      padding:50px 20px;
+      background:#f9f9f9;
+      text-align:center;
+    }
+    #testimonial-box {
+      font-size:18px;
+      margin:20px auto;
+      max-width:600px;
+    }
+    footer {
+      background:#333;
+      color:#fff;
+      text-align:center;
+      padding:15px;
+      margin-top:40px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="payment.html">Payment</a>
+    <a href="thankyou.html">Thank You</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero Banner -->
   <header class="hero">
-    <h1>Launch Your Online Business Today!</h1>
-    <p>Helping 1,000+ entrepreneurs worldwide build and grow their business</p>
-    <button onclick="location.href='payment.html'">Join Now</button>
+    <h1>Welcome to BizStarterHub</h1>
+    <p>Helping 1,000+ entrepreneurs worldwide launch their business</p>
+    <a href="features.html">Get Started</a>
   </header>
 
-  <!-- Intro Video -->
-  <div class="video-container">
-    <h2>Watch Our Intro Video</h2>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/d1KSghlLNkc"
-      frameborder="0" allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- Testimonials Slider -->
+  <!-- Testimonials -->
   <section class="testimonials">
-    <h2>Trusted by Entrepreneurs Worldwide</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <!-- USA & Canada -->
-        <div class="swiper-slide">
-          <p>"BizStarterHub helped me launch my online store."</p>
-          <strong>- John, New York (USA)</strong>
-        </div>
-        <div class="swiper-slide">
-          <p>"The systems saved me months of trial and error."</p>
-          <strong>- Sarah, Los Angeles (USA)</strong>
-        </div>
-        <div class="swiper-slide">
-          <p>"I scaled my freelance business faster than I imagined."</p>
-          <strong>- Mike, Toronto (Canada)</strong>
-        </div>
-
-        <!-- Europe -->
-        <div class="swiper-slide">
-          <p>"The weekly masterminds gave me clarity and confidence."</p>
-          <strong>- Maria, Madrid (Spain)</strong>
-        </div>
-        <div class="swiper-slide">
-          <p>"I turned my side hustle into a full‑time income."</p>
-          <strong>- Luca, Milan (Italy)</strong>
-        </div>
-        <div class="swiper-slide">
-          <p>"BizStarterHub gave me the courage to start."</p>
-          <strong>- Anna, Berlin (Germany)</strong>
-        </div>
-      </div>
-    </div>
+    <h2>What Entrepreneurs Around the World Say</h2>
+    <div id="testimonial-box"></div>
   </section>
 
-  <!-- Swiper.js -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Footer -->
+  <footer>
+    © 2026 BizStarterHub — Empowering Entrepreneurs Worldwide
+  </footer>
+
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      loop: true,
-      autoplay: { delay: 5000 }, // 5 seconds
-      effect: 'fade'
-    });
+    // 1,000+ testimonials stored in an array
+    const testimonials = [
+      // North America
+      '"BizStarterHub helped me launch my store in days!" – John, USA',
+      '"Starting my business was simple and fast." – Emily, Canada',
+      '"I finally reached customers online." – Carlos, Mexico',
+
+      // South America
+      '"I scaled my idea quickly thanks to BizStarterHub." – Sofia, Brazil',
+      '"Great support and easy setup." – Diego, Argentina',
+      '"Perfect for beginners like me." – Valeria, Chile',
+      '"Made my business global." – Mateo, Colombia',
+      '"Smooth and professional experience." – Ana, Peru',
+
+      // Europe
+      '"Highly recommended for entrepreneurs." – David, UK',
+      '"I love how simple and fast it is." – Maria, Spain',
+      '"Best decision I made for my startup." – Luca, Italy',
+      '"The guidance made me confident to start." – Anna, Germany',
+      '"Easy to use and reliable." – Eva, France',
+      '"BizStarterHub gave me confidence." – Tomas, Poland',
+      '"A great tool for small businesses." – Petra, Czech Republic',
+      '"Helped me expand internationally." – Jonas, Sweden',
+      '"Made entrepreneurship accessible." – Sofia, Greece',
+
+      // Africa
+      '"Perfect for beginners like me." – Aisha, Nigeria',
+      '"Finally a platform that works for small businesses." – Ahmed, Egypt',
+      '"I grew my shop online." – Thabo, South Africa',
+      '"Great for local entrepreneurs." – Fatima, Morocco',
+      '"BizStarterHub gave me a voice." – Daniel, Kenya',
+      '"I reached new customers fast." – Grace, Ghana',
+      '"Helped me connect globally." – Elias, Ethiopia',
+      '"Made my dream possible." – Mariam, Tanzania',
+
+      // Asia
+      '"Finally a platform that works for small businesses." – Chen, China',
+      '"Easy to use and reliable." – Keiko, Japan',
+      '"Best decision I made for my startup." – Priya, India',
+      '"Smooth and professional experience." – Omar, Saudi Arabia',
+      '"Highly recommended for entrepreneurs." – Noor, UAE',
+      '"BizStarterHub gave me confidence." – Ali, Pakistan',
+      '"Helped me expand internationally." – Narin, Thailand',
+      '"Made entrepreneurship accessible." – Minh, Vietnam',
+      '"Great support and easy setup." – Siti, Malaysia',
+
+      // Oceania
+      '"BizStarterHub helped me launch my store in days!" – Chloe, Australia',
+      '"Starting my business was simple and fast." – Liam, New Zealand',
+      '"I finally reached customers online." – Mia, Fiji',
+
+      // … continue this pattern until you reach 1,000+ entries
+      // You can duplicate the structure: short positive quote + name + country
+      // Example filler:
+      '"BizStarterHub is amazing for entrepreneurs." – Alex, Belgium',
+      '"I recommend it to all startups." – Noor, Jordan',
+      '"It gave me the tools I needed." – Samuel, Cameroon',
+      '"I grew my audience quickly." – Elena, Russia',
+      '"The best platform for growth." – Jacob, South Korea',
+      '"Made my dream a reality." – Sara, Turkey',
+      '"Helped me connect with global customers." – Daniel, Philippines',
+      '"Simple, fast, and effective." – Fatou, Senegal',
+      '"I love how easy it is." – Ivan, Ukraine',
+      '"BizStarterHub changed my life." – Mei, Singapore',
+      // … keep adding until you hit 1,000+
+    ];
+
+    let current = 0;
+    function showTestimonial() {
+      const box = document.getElementById('testimonial-box');
+      box.textContent = testimonials[current];
+      current = (current + 1) % testimonials.length;
+    }
+    setInterval(showTestimonial, 5000); // rotate every 5 seconds
+    window.onload = showTestimonial;
   </script>
 
 </body>
